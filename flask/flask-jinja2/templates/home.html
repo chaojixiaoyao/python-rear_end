@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>home</title>
+</head>
+<body>
+    <h1>欢迎回来:{{ username }}</h1>
+    <!-- url_for('first_blue.login')执行login这个函数 -->
+    <a href="{{ url_for('first_blue.login') }}">登陆</a>
+    <a href="{{ url_for('first_blue.logout') }}">退出</a>
+</body>
+</html>
