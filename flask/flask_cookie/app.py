@@ -3,10 +3,14 @@ from flask import (
     render_template,
     Blueprint,
     request,
+    session,
+    Session,
 )
 from routes.basic import main
 
 app = Flask(__name__)
+
+app.secret_key = 'rand123_456_s_d__ee'
 
 
 # 注册蓝图
@@ -16,7 +20,8 @@ app.register_blueprint(blueprint=main)
 @app.route('/')
 def home():
     # 拿到cookies
-    user = request.cookies.get('user', '')
+    # user = request.cookies.get('user', '')
+    user = session.get('user')
     return render_template('home.html', username=user)
 
 

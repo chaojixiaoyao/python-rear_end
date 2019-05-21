@@ -5,6 +5,7 @@ from flask import (
     Response,
     redirect,
     url_for,
+    session,
 )
 
 main = Blueprint('first_blue', __name__)
@@ -21,6 +22,8 @@ def login():
         # 加入cookie
         # 键值对
         response.set_cookie('user', username)
+        # 设置session
+        session['user'] = response
         return response
 
 
@@ -33,5 +36,6 @@ def registered():
 def logout():
     # 清除cookies
     response = redirect(url_for('home'))
-    response.delete_cookie('user')
+    # response.delete_cookie(''user)
+    response.delete_cookie('session')
     return response
