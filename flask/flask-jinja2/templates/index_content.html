@@ -1,0 +1,32 @@
+<div>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/content.css') }}" >
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <!--清除浮动-->
+        <p style="clear: both"> </p>
+    </ul>
+
+    {% macro hello() %}
+        <h4>产品哈哈哈哈</h4>
+    {% endmacro %}
+
+    <!-- 调用hello -->
+    {{ hello() }}
+
+    {% macro say_hello(name) %}
+    <h3>很高兴见到你{{ name }}</h3>
+    {% endmacro %}
+
+    <!--调用 say_hello-->
+    {{ say_hello('rose') }}
+
+    {% from 'mac.html' import name_html %}
+    {{ name_html('fuck_name')}}
+    {{ name_html('fuck_world')}}
+
+</div>

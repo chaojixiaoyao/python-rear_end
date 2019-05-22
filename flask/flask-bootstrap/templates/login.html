@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>login</title>
+</head>
+<body>
+
+<!-- url_for('first_blue.login' 没写死是想根据请求方式来写 -->
+<form action="{{ url_for('first_blue.login') }}" method="post">
+    <span>用户名:</span><input type="text" name="username" placeholder="请输入用户名">
+    <br>
+    <input type="submit">
+</form>
+
+</body>
+</html>
