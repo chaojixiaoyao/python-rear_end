@@ -9,7 +9,7 @@ main = Blueprint('jinja2_blue', __name__)
 
 @main.route('/template')
 def index():
-    return render_template('index.html')
+    return render_template('show_index.html')
 
 
 @main.route('/inherit')

@@ -29,7 +29,7 @@ def login():
 
 @main.route('/registered')
 def registered():
-    return render_template('index.html')
+    return render_template('show_index.html')
 
 
 @main.route('/logout')
