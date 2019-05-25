@@ -7,8 +7,9 @@ def init_db(app):
     db.init_app(app)
 
 
+
 class Person(db.Model):
-    p_id = db.Column(db.Integer, primary_key=True, autoincrement=True)
+    p_id = db.Column(db.Integer, primary_key=True, autoincSQLAlchemyrement=True)
     p_name = db.Column(db.String(16))
 
 
