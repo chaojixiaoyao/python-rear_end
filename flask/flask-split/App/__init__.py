@@ -5,6 +5,7 @@ from flask import (
 from App.models import init_db
 from routes.route import init_blue
 from App.settinge import envs
+from App.models import db
 
 
 def create_app():
@@ -16,4 +17,6 @@ def create_app():
 
     # 初始化第三方插件，库
     init_db(app)
+
+
     return app
