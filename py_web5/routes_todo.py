@@ -5,7 +5,7 @@ from path_fun import current_user
 
 
 def template(name):
-    path = 'template/' + name
+    path = 'templates/' + name
     log('path', path)
     with open(path, 'r', encoding='utf-8') as f:
         return f.read()

@@ -7,7 +7,7 @@ from flask import (
 main = Blueprint('jinja2_blue', __name__)
 
 
-@main.route('/template')
+@main.route('/templates')
 def index():
     return render_template('show_index.html')
 
