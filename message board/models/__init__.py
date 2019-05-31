@@ -9,6 +9,7 @@ from routes.route_index import main_init
 
 def create_app():
     app = Flask(__name__, template_folder='../templates')
+    app.secret_key = 'r15fd58v1d45v4ss54v'
     # 初始化服务器配置
     app.config.from_object(envs.get('develop'))
 

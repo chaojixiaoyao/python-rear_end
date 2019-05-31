@@ -3,9 +3,10 @@
 {% block content %}
     <div class="container">
         <div class="jumbotron">
-            <h1>Hello, world!</h1>
+            <h1>Hello{{ username }}</h1>
             <p>你的留言板</p>
             <p><a class="btn btn-primary btn-lg" href="{{ url_for("Blue_main.login") }}" role="button">登陆</a></p>
+            <p><a class="btn btn-primary btn-lg" href="{{ url_for("Blue_main.logout") }}" role="button">退出</a></p>
         </div>
 
     </div>

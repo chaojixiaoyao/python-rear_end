@@ -17,13 +17,12 @@ def login():
         return render_template('login.html')
     elif request.method == 'POST':
         username = request.form.get('username', '')
-
+        # 设置session
+        session['user'] = username
         response = Response(response='登陆成功%s' % username)
         # 加入cookie
         # 键值对
         response.set_cookie('user', username)
-        # 设置session
-        session['user'] = response
         return response
 
 
@@ -35,7 +34,7 @@ def registered():
 @main.route('/logout')
 def logout():
     # 清除cookies
-    response = redirect(url_for('home'))
+    response = redirect(url_for('.home'))
     # response.delete_cookie(''user)
     response.delete_cookie('session')
     return response
